@@ -1,4 +1,4 @@
-# Lecture 1
+# ==🔴Lecture 1==
 
 ## Programming Languages
 
@@ -6,7 +6,7 @@
 - Syntax must be exact → `print(5 + 5)`
 - Abstraction levels (top → bottom): **Natural language → High-level → Low-level → Machine language** (bits: 0s & 1s)
 
-||High-level|Low-level|
+|Feature|High-level|Low-level|
 |---|---|---|
 |Instruction set|Larger|Smaller|
 |Writing|Easier|Harder|
@@ -38,7 +38,7 @@ C --> D[Output]
 
 ## Scripts vs Notebooks
 
-||Script `.py`|Notebook `.ipynb`|
+|Feature|Script `.py`|Notebook `.ipynb`|
 |---|---|---|
 |Runs|Whole file, from terminal|Cell by cell, any order|
 |Written in|IDE|Colab / Jupyter|
@@ -80,4 +80,5 @@ Colab → notebooks (concepts, examples, notes) → small code for core concepts
 
 Source: [Lecture 1 video](https://youtu.be/E8kMWobEoXI)
 
-# Lecture 2
+
+# ==🔴Lecture 2==
