@@ -124,11 +124,11 @@ Source: [1.1 Vectors video](https://youtu.be/FeCxx5-q94Y)
 - $\cos\theta = \dfrac{\mathbf{u}^T\mathbf{v}}{\lVert \mathbf{u} \rVert , \lVert \mathbf{v} \rVert}$ → same as $\mathbf{u}^T\mathbf{v} = \lVert \mathbf{u} \rVert , \lVert \mathbf{v} \rVert \cos\theta$
 - Range $-1$ to $1$:
 
-|$\cos\theta$|Angle|Meaning|
-|---|---|---|
-|$1$|$0°$|Same direction (length can differ)|
-|$0$|$90°$|**Orthogonal** (perpendicular)|
-|$-1$|$180°$|Opposite directions|
+| $\cos\theta$ | Angle  | Meaning                            |
+| ------------ | ------ | ---------------------------------- |
+| $1$          | $0°$   | Same direction (length can differ) |
+| $0$          | $90°$  | **Orthogonal** (perpendicular)     |
+| $-1$         | $180°$ | Opposite directions                |
 
 - Undefined if either vector is $\mathbf{0}$
 
