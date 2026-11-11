@@ -1,11 +1,9 @@
 ## Part 1 — Python
 
-- [Exercism Python track](https://exercism.org/tracks/python)
+- [Exercism Python track]([https://exercism.org/tracks/python](https://exercism.org/tracks/python))
 
-## Part 2 — Data Science
-
-- [Berkeley Data 100](https://ds100.org/fa25) · [labs notebooks](https://github.com/DS-100/fa25-student)
-
+## Part 2 — Data Science after finishing the KAUST CISCO courses 
+ 
 1. Lab 1: Prerequisite Coding
 2. Lab 2A: Pandas
 3. Lab 2B: Data Cleaning and EDA
