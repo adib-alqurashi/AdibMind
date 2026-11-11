@@ -1,3 +1,8 @@
+problem set:
+lec1,2:
+lec3,4:
+lec5,6:
+lec7,8:
 # ==🔴Lecture 1==
 
 ## Programming Languages
@@ -82,6 +87,7 @@ Source: [Lecture 1 video](https://youtu.be/E8kMWobEoXI)
 
 
 # ==🔴Lecture 2==
+
 
 ## Print
 
