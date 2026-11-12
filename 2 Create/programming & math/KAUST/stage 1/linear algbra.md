@@ -172,7 +172,7 @@ Source: [1.2 video](https://youtu.be/d8QfPSsedRY)
 - **Size** $m \times n$ → $m$ rows, $n$ columns (rows first)
 - $a_{ij}$ → row $i$, column $j$ (math starts at 1, Python at 0)
 
-$$A = \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \ \vdots & & & \vdots \ a_{m1} & a_{m2} & \cdots & a_{mn} \end{bmatrix}$$
+$$A = \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \ \vdots & \vdots & \ddots & \vdots \ a_{m1} & a_{m2} & \cdots & a_{mn} \end{bmatrix}$$
 
 ## Shapes
 
@@ -204,7 +204,8 @@ $$A = \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \ \vdots & & & \vdots \ 
 ## Transpose
 
 - $A^T$ → rows become columns, columns become rows → $m \times n$ becomes $n \times m$
-- Example: $A = \begin{bmatrix} 0 & 6 \ 2 & 3 \ 1 & -1 \end{bmatrix}$ ($3 \times 2$) → $A^T = \begin{bmatrix} 0 & 2 & 1 \ 6 & 3 & -1 \end{bmatrix}$ ($2 \times 3$)
+- Example: $A = \begin{bmatrix} 0 & 3 \ 6 & 1 \ 2 & -1 \end{bmatrix}$ ($3 \times 2$) → $A^T = \begin{bmatrix} 0 & 6 & 2 \ 3 & 1 & -1 \end{bmatrix}$ ($2 \times 3$)
+- Row vector → transpose → column vector (and vice versa)
 - **Symmetric** → $A^T = A$ → must be square, $a_{ij} = a_{ji}$ (mirror across the diagonal)
 
 ## Addition & Scalar Multiplication
@@ -229,7 +230,7 @@ $$A = \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \ \vdots & & & \vdots \ 
 - Transpose of a $3 \times 2$? → $2 \times 3$
 - Symmetric means? → $A^T = A$
 - Can you add $2 \times 3$ and $2 \times 2$? → **no**
-
+￼￼2.2 Product of Matric
 Source: [2.1 video](https://youtu.be/6HzOv2qICRo)
 
 # 2.2 Product of Matrices
