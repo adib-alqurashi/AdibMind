@@ -448,4 +448,4 @@ else:
 - `bool("0")`? → **`True`** (non-empty string)
 - Validate before `int()`? → **`.isnumeric()`**
 
-Source: [Lecture 4 video](https://youtu.be/2ksKjayR0eM)
+Source: [Lecture 4 video](https://youtu.be/2ksKjayR0eM) 
