@@ -1,8 +1,5 @@
-problem set:
-lec1,2:
-lec3,4:
-lec5,6:
-lec7,8:
+problem set: lec1,2: lec3,4: lec5,6: lec7,8:
+
 # ==🔴Lecture 1==
 
 ## Programming Languages
@@ -67,7 +64,10 @@ C --> D[Output]
 - Free GPUs / TPUs
 - Flow: browser → code to cloud runtime → executes → output back
 
-> [!danger] Runtime is temporary **Lost** when runtime stops / disconnects / times out: uploaded datasets, generated files, trained model weights → **download them** **Kept** (saved to Drive): notebook code, displayed outputs, markdown
+> [!danger] Runtime is temporary
+> 
+> - **Lost** when runtime stops / disconnects / times out: uploaded datasets, generated files, trained model weights → **download them**
+> - **Kept** (saved to Drive): notebook code, displayed outputs, markdown
 
 ## Course Path
 
@@ -85,9 +85,7 @@ Colab → notebooks (concepts, examples, notes) → small code for core concepts
 
 Source: [Lecture 1 video](https://youtu.be/E8kMWobEoXI)
 
-
 # ==🔴Lecture 2==
-
 
 ## Print
 
@@ -260,4 +258,194 @@ Source: [Lecture 1 video](https://youtu.be/E8kMWobEoXI)
 
 Source: [Lecture 2 video](https://youtu.be/7xtf7ToKJ58)
 
-# Lecture 3
+# ==🔴Lecture 3==
+
+## Containers
+
+- One variable = one value → **container** = many values under one name
+
+|Container|Syntax|Ordered|Changeable|Duplicates|
+|---|---|---|---|---|
+|List|`[1, 2, 3]`|✅|✅|✅|
+|Tuple|`(1, 2, 3)`|✅|❌|✅|
+|Dict|`{"a": 1}`|by key|✅|keys unique|
+|Set|`{1, 2, 3}`|❌|✅|❌|
+
+## Lists
+
+- `scores = [88, 92, 75]` · empty → `[]` · can mix types
+- Indexing & slicing work like strings → `scores[0]` → `88`, `scores[-1]` → `75`, `scores[0:2]` → `[88, 92]`
+- Lists are **mutable** → `scores[1] = 95` ✅ (strings can't do this)
+- `len(scores)` → number of items
+
+### Growing a List
+
+|Method|Does|Example|
+|---|---|---|
+|`.append(x)`|Add one item at the end|`scores.append(70)`|
+|`.extend([...])`|Add many items at the end|`scores.extend([60, 99])`|
+|`.insert(i, x)`|Add at position `i`|`scores.insert(0, 100)`|
+|`+`|Join two lists → new list|`[1, 2] + [3]` → `[1, 2, 3]`|
+
+### Sorting
+
+|Code|Result|
+|---|---|
+|`scores.sort()`|Sorts **in place** → changes `scores`, returns `None`|
+|`sorted(scores)`|Returns a **new** sorted list → original unchanged|
+|`reverse=True`|Descending → `sorted(scores, reverse=True)`|
+
+> [!warning] `x = scores.sort()` → `x` is `None` Use `sorted()` when you want the result in a new variable.
+
+### Copying
+
+> [!danger] `b = a` is NOT a copy Both names point to the **same** list → changing `b` changes `a` too.
+
+```python
+a = [1, 2, 3]
+b = a
+b.append(4)
+print(a)   # [1, 2, 3, 4]  ← a changed too!
+```
+
+- Real copy → `b = a.copy()` or `b = a[:]` or `b = list(a)`
+
+## Tuples
+
+- Like a list, but **immutable** → for **fixed records**
+- `student = ("Aisha", 20, "CS")` → `student[0]` → `"Aisha"`
+- `student[1] = 21` → ❌ error
+- **Unpacking** → `name, age, major = student`
+
+## Dictionaries
+
+- **Key → value** pairs → look up by **name**, not position
+- `ages = {"Aisha": 20, "Omar": 22}`
+
+|Code|Does|
+|---|---|
+|`ages["Aisha"]`|Get value → `20`|
+|`ages["Sara"] = 19`|Add new key, or update if it exists|
+|`ages.get("Ali")`|Safe get → `None` if missing (no error)|
+|`ages.get("Ali", 0)`|Safe get with default → `0`|
+|`"Aisha" in ages`|Checks **keys** → `True`|
+|`.keys()` · `.values()` · `.items()`|All keys · all values · (key, value) pairs|
+
+- Missing key with `[]` → **KeyError** → use `.get()`
+- Keys must be unique & immutable (str, int, tuple)
+
+## Sets
+
+- `fruits = {"apple", "banana"}` · empty → `set()` (`{}` is an empty **dict**!)
+- **No duplicates**, **no order**, **no indexing** → `fruits[0]` ❌
+- Main use → **fast membership** → `"apple" in fruits`
+- Remove duplicates → `set([1, 1, 2])` → `{1, 2}`
+- Add → `fruits.add("cherry")`
+
+## Choosing a Container
+
+|Need|Use|
+|---|---|
+|Ordered collection that changes|**List**|
+|Fixed record that shouldn't change|**Tuple**|
+|Look up a value by name / key|**Dict**|
+|Unique items, fast "is it in?"|**Set**|
+
+## Quick Recall
+
+- `[1, 2]` · `(1, 2)` · `{"a": 1}` · `{1, 2}`? → **list · tuple · dict · set**
+- `.append` vs `.extend`? → **one item** vs **many items**
+- `.sort()` vs `sorted()`? → **in place, returns `None`** vs **new list**
+- `b = a` then `b.append(4)` → `a` changes? → **yes, same list** → use `.copy()`
+- Can you change a tuple? → **no, immutable**
+- Get a dict value safely? → **`.get(key)`**
+- `"Aisha" in ages` checks? → **keys**
+- Empty set? → **`set()`** (not `{}`)
+- Set index `s[0]`? → **not allowed**
+- Fixed record? → **tuple** · lookup by name? → **dict** · unique / membership? → **set**
+
+Source: [Lecture 3 video](https://youtu.be/KdTHcdyDHtA)
+
+# ==🔴Lecture 4==
+
+## Input
+
+- `input("prompt")` → waits for the user to type, then continues
+- Always returns a **string** → cast for numbers → `age = int(input("Age: "))`
+
+> [!warning] `input()` is always `str` `"5" + "3"` → `"53"`, not `8` → cast first with `int()` / `float()`
+
+## if / elif / else
+
+```python
+score = 85
+if score >= 90:
+    print("A")
+elif score >= 80:
+    print("B")
+else:
+    print("C")
+```
+
+- Checked **top → bottom** → the **first** True branch runs, the rest are skipped
+- `elif` (as many as needed) & `else` (catch-all) are optional
+- Condition = anything that gives `True` / `False` (comparison operators from Lecture 2)
+
+## Indentation
+
+- Line ends with a colon `:` → the block under it is **indented** (4 spaces)
+- Indentation is **part of the syntax**, not style → wrong/missing → **IndentationError**
+- Back at the outer level → code runs no matter what the condition was
+
+## Logical Operators
+
+|Operator|True when|Example|
+|---|---|---|
+|`and`|**Both** are True|`age >= 18 and has_id`|
+|`or`|**At least one** is True|`day == "Fri" or day == "Sat"`|
+|`not`|Flips the value|`not is_banned`|
+
+### Short-Circuit Evaluation
+
+- `and` → stops at the first **False** · `or` → stops at the first **True** → the right side isn't evaluated
+- Use it as a guard → `if b != 0 and a / b > 2:` → no ZeroDivisionError
+
+### Truthiness
+
+- Any value can be used as a condition
+
+|Falsy|Truthy|
+|---|---|
+|`False`, `None`, `0`, `0.0`, `""`, `[]`, `()`, `{}`, `set()`|Everything else → `"0"`, `" "`, `[0]`, `-1`|
+
+- `if name:` → means "if `name` is not empty"
+
+## Validate Input First
+
+- Pattern: **check the input → reject if bad → only then do the main work**
+
+```python
+age_text = input("Age: ")
+if not age_text.isnumeric():
+    print("Please enter a whole number")
+else:
+    age = int(age_text)
+    print(f"Next year you'll be {age + 1}")
+```
+
+- `.isnumeric()` check → prevents `int("hello")` crashing the program
+
+## Quick Recall
+
+- `input()` returns? → **always `str`**
+- Number from input? → **`int(input())`**
+- How many branches run in an if/elif/else? → **at most one** (the first True)
+- What marks a block? → **colon `:` + indentation**
+- Bad indentation? → **IndentationError**
+- `True and False` · `True or False` · `not True`? → **`False`** · **`True`** · **`False`**
+- Why is `b != 0 and a / b > 2` safe? → **short-circuit** → division skipped if `b == 0`
+- Falsy values? → **`False`, `None`, `0`, `""`, empty containers**
+- `bool("0")`? → **`True`** (non-empty string)
+- Validate before `int()`? → **`.isnumeric()`**
+
+Source: [Lecture 4 video](https://youtu.be/2ksKjayR0eM)
