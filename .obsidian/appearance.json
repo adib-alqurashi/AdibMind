@@ -9,5 +9,6 @@
   ],
   "textFontFamily": "Source Serif 4",
   "interfaceFontFamily": "Inter",
-  "monospaceFontFamily": "JetBrains Mono"
+  "monospaceFontFamily": "JetBrains Mono",
+  "showRibbon": true
 }
