@@ -8,12 +8,12 @@ problem set: lec1,2: lec3,4: lec5,6: lec7,8:
 - Syntax must be exact → `print(5 + 5)`
 - Abstraction levels (top → bottom): **Natural language → High-level → Low-level → Machine language** (bits: 0s & 1s)
 
-|Feature|High-level|Low-level|
-|---|---|---|
-|Instruction set|Larger|Smaller|
-|Writing|Easier|Harder|
-|Code length|Shorter|Longer|
-|Speed|Slower|Faster|
+| Feature         | High-level | Low-level |
+| --------------- | ---------- | --------- |
+| Instruction set | Larger     | Smaller   |
+| Writing         | Easier     | Harder    |
+| Code length     | Shorter    | Longer    |
+| Speed           | Slower     | Faster    |
 
 - **Python** = high-level + fast low-level libraries → best of both worlds
 - **Compiler**: high/low-level code → machine language
