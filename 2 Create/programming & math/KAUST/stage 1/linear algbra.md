@@ -580,10 +580,10 @@ $$P_1 = \begin{bmatrix} 0 & 0 & 0 \ 0 & 0 & 0 \ 0 & 0 & 1 \end{bmatrix}, \quad P
 
 ## Goal
 
-|Symbol|Name|Meaning|
-|---|---|---|
-|$\mathbf{p}$|Projection **vector**|The shadow of $\mathbf{b}$|
-|$P$|Projection **matrix**|$\mathbf{p} = P\mathbf{b}$|
+| Symbol       | Name                  | Meaning                    |
+| ------------ | --------------------- | -------------------------- |
+| $\mathbf{p}$ | Projection **vector** | The shadow of $\mathbf{b}$ |
+| $P$          | Projection **matrix** | $\mathbf{p} = P\mathbf{b}$ |
 
 ## Projecting onto the Line Through $\mathbf{a}$
 
@@ -782,11 +782,11 @@ $$\lVert \mathbf{e} \rVert^2 = e_1^2 + e_2^2 + \dots + e_n^2$$
 
 ## Beyond Lines
 
-|Fit|Model|Columns of $A$|
-|---|---|---|
-|Line|$C + Dt$|$1$, $t$|
-|Quadratic|$C + Dt + Et^2$|$1$, $t$, $t^2$|
-|Degree $p$|$\theta_0 + \theta_1 t + \dots + \theta_p t^p$|$1$, $t$, $t^2$, …, $t^p$|
+| Fit        | Model                                          | Columns of $A$            |
+| ---------- | ---------------------------------------------- | ------------------------- |
+| Line       | $C + Dt$                                       | $1$, $t$                  |
+| Quadratic  | $C + Dt + Et^2$                                | $1$, $t$, $t^2$           |
+| Degree $p$ | $\theta_0 + \theta_1 t + \dots + \theta_p t^p$ | $1$, $t$, $t^2$, …, $t^p$ |
 
 - Same recipe every time → build $A$, solve the normal equations → $\hat{\theta}_0, \dots, \hat{\theta}_p$
 - Which degree to choose? → covered later in the specialization (video description: compare **RMS error on a test set** and pick a sensible degree)
